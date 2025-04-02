@@ -11,26 +11,7 @@
   </head>
 
   <body>
-    <p>
-    プルリクエストの仕方
-    githubにrepository作る
-    /rails new _ _ プロジェクト名 オプション
-    /cd
-    /git init
-    /git remote add origin githubのURL
-    /git status
-    /git add .
-    /git status
-    /git commit -m ""
-    /git push -u origin main
-    /git checkout -b develop
-    /git branch
-    /rails g controller samples
-    /git status
-    /git add .
-    /git commit -m ""
-    /git push -u origin develop
-    </p>
+    <h1>現在の日付：<%= Date.current.strftime("%Y年%m月%d日") %></h1>
     <%= yield %>
   </body>
 </html>
