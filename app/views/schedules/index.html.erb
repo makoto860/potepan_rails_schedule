@@ -31,11 +31,8 @@
         <td><%= schedule.start_date.strftime("%Y年 %m月 %d日") if schedule.start_date %></td>
         <td><%= schedule.end_date.strftime("%Y年 %m月 %d日") if schedule.end_date %></td>
         <td>
-          <% if schedule.all_day == "1" %>
-            <p>◯</p>
-          <% else schedule.all_day == "0" %>
-            <p></p>
-          <% end %>
+          <%= "○" if schedule.all_day %>
+          <%= "" else schedule.all_day %>
         </td>
         <td><%= schedule.updated_at.to_s(:datetime_jp) %></td>
         <td><%= link_to "情報", schedule %></td>
